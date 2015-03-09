@@ -1,6 +1,13 @@
 # NettyHttpServer
 
-Реализован  http-сервер на фреймворке netty версии 4.0.0.CR9.
+Реализован  http-сервер на фреймворке netty версии 4.0.0.CR9 с параметрами:
+
+EventLoopGroup bossGroup = new NioEventLoopGroup(max_connections);
+EventLoopGroup workerGroup = new NioEventLoopGroup(max_streams);
+
+, max_connections = 5, max_streams = 10
+То есть открывается до 5 входящих соединений, а каждом до 10 отдельных потоков, отвечающих за трафик.
+
 
 1. Запрос http://127.0.0.1:8080/hello возвращает "Hello World" с 10-секундной задержкой. В ответ на запрос возвращается
 html файл с текстом "Hello World" (также можно возвращать простой текст).
