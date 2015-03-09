@@ -18,7 +18,7 @@ status.html и передается на вывод
 4. Запрос на любую другую страницу вернет файл 404.html
 
 5. Скриншоты
-1) - скриншоты как выглядят станицы /status в рабочем приложении:
+6. 1) - скриншоты как выглядят станицы /status в рабочем приложении:
 
 ![Alt text](/report/1_1_status_before.png?raw=true "Screenshot before 1")
 ![Alt text](/report/1_2_status_before.png?raw=true "Screenshot before 2")
