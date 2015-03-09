@@ -5,9 +5,13 @@
 EventLoopGroup bossGroup = new NioEventLoopGroup(max_connections);
 EventLoopGroup workerGroup = new NioEventLoopGroup(max_streams);
 
-, max_connections = 5, max_streams = 10
+, где установлены значения max_connections = 5, max_streams = 10
 То есть открывается до 5 входящих соединений, а каждом до 10 отдельных потоков, отвечающих за трафик.
 
+Приложение собирается Maven'ом.
+
+
+Детали имплементации:
 
 1. Запрос http://127.0.0.1:8080/hello возвращает "Hello World" с 10-секундной задержкой. В ответ на запрос возвращается
 html файл с текстом "Hello World" (также можно возвращать простой текст).
@@ -34,7 +38,7 @@ status.html и передается на вывод
 2)  - скриншот результата выполнения команды ab – c 100 – n 10000 http://somedomain/status
 
 Команду ab с указанными параметрами успешно выполнить не удалось. Предполагаю, что это связано с конфигурацией
-домашнего ПК или неидеальной настройкой сервера на netty
+домашнего ПК или неидеальной настройкой сервера на netty.
 Успешно была выполнена команда со следующими параметрами:
 
 ![Alt text](/report/status_ab.png?raw=true "Screenshot ab")
@@ -44,3 +48,7 @@ status.html и передается на вывод
 ![Alt text](/report/2_1_status_after.png?raw=true "Screenshot after 1")
 ![Alt text](/report/2_2_status_after.png?raw=true "Screenshot after 2")
 ![Alt text](/report/2_3_status_after.png?raw=true "Screenshot after 3")
+
+
+Не реализовано:
+- подсчет объема принятых/переданных данных и скорость соединения
