@@ -16,7 +16,7 @@ EventLoopGroup workerGroup = new NioEventLoopGroup(max_streams);
 1. Запрос http://127.0.0.1:8080/hello возвращает "Hello World" с 10-секундной задержкой. В ответ на запрос возвращается
 html файл с текстом "Hello World" (также можно возвращать простой текст).
 
-2. Запрос на http://127.0.0.1:8080/redirect?url=<url> переадресует на путь, указанный в =<url>
+2. Запрос на http://127.0.0.1:8080/redirect?url=<url> переадресует на путь, указанный в <url>
 Реализовано при помощи отправки нового объекта Response (new DefaultFullHttpResponse) 
 с соответствующим заголовком HttpHeaders.Names.LOCATION
 
