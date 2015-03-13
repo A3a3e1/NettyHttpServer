@@ -39,7 +39,7 @@ status.html и с Response'ом возвращается клиенту.
 
 Команду ab с указанными параметрами успешно выполнить не удалось. Предполагаю, что это связано с конфигурацией
 домашнего ПК или неидеальной настройкой сервера на netty.
-Успешно была выполнена команда со следующими параметрами:
+Успешно была выполнена команда с несколько упрощенными параметрами:
 
 ![Alt text](/report/status_ab.png?raw=true "Screenshot ab")
 
@@ -48,7 +48,3 @@ status.html и с Response'ом возвращается клиенту.
 ![Alt text](/report/2_1_status_after.png?raw=true "Screenshot after 1")
 ![Alt text](/report/2_2_status_after.png?raw=true "Screenshot after 2")
 ![Alt text](/report/2_3_status_after.png?raw=true "Screenshot after 3")
-
-
-Не реализовано:
-- подсчет объема принятых/переданных данных и скорость соединения.
