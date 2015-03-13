@@ -131,6 +131,7 @@ public class StatusHandler {
         HtmlCanvas html = new HtmlCanvas();
 
 //---------------START___Unique IP statistics
+        
         html
                 .p().i().content("Current IP: " + ip)
                 .p().content("Total requests: " + countAll)
